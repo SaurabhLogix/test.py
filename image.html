@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .countdown {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .countdown div {
+            display: flex;
+            align-items: center;
+        }
+
+        .colon {
+            margin: 0 10px;
+            /* Space between time units */
+        }
+
+        /* Optionally, you can style the colons here */
+        .colon {
+            color: #333;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="countdown">
+        <div class="dayy"><span id="days">00</span> days</div>
+        <span class="colon">:</span>
+        <div class="horr"><span id="hours">00</span> hours</div>
+        <span class="colon">:</span>
+        <div class="minn"><span id="minutes">00</span> mins</div>
+    </div>
+    <script>
+        function updateCountdown() {
+            // Set the end date (YYYY, MM, DD, HH, MM, SS)
+            const endDate = new Date('2024-12-31T23:59:59');
+
+            const now = new Date();
+            const timeRemaining = endDate - now;
+
+            if (timeRemaining <= 0) {
+                document.getElementById('days').innerText = '00';
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                return;
+            }
+
+            // Calculate days, hours, and minutes
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+
+            // Update the HTML with the calculated values
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+        }
+
+        // Update the countdown every minute
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+    </script>
+</body>
+
+</html>

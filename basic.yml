@@ -1,0 +1,24 @@
+
+students:
+  student1:
+    name: saurabh
+    age: 30
+    passed: true
+    subjects:
+      -math
+      -english
+    marks:
+      math: 50
+      english: 40
+
+
+  student2:
+    name: saurabh01
+    age: 20
+    passed: false
+    subjects:
+      -math
+      -english
+    marks:
+      math: 50
+      english: 10

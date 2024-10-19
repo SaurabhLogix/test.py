@@ -1,0 +1,63 @@
+groceries:
+  - milk
+  - eggs
+  - chocolate
+
+recipe:
+  name: "Pasta Primavera"
+  ingredients:
+    - pasta
+    - veggies
+
+
+dinner:
+  main:
+    dish: "Spaghetti"
+    sauce: "Marinara"
+  dessert:
+    type: "Ice Cream"
+    flavor: "Chocolate"
+
+
+
+
+#A Magical Dinner Party: Where Wizards and Superheroes Unite!
+
+dinner_party:
+  guests:
+    - name: "Harry Potter"
+      drink: "Butterbeer"
+      favorite_dish: "Pumpkin Pasties"
+      outfit: "Wizard Robes"
+    - name: "Sherlock Holmes"
+      drink: "Tea"
+      favorite_dish: "Beef Wellington"
+      outfit: "Deerstalker Hat"
+    - name: "Iron Man"
+      drink: "Vintage Wine"
+      favorite_dish: "Steak"
+      outfit: "Iron Suit"
+    - name: "Hermione Granger"
+      drink: "Polyjuice Potion"
+      favorite_dish: "Chocolate Frog"
+      outfit: "House Elf Costume"
+
+  menu:
+    - "Mystery Meat"
+    - "Wands & Waffles"
+    - "Elven Bread"
+    - "Dragonfire Chili"
+    - "Gryffindor Grilled Cheese"
+    - "Hobbit Pie"
+    - "Capitol Cupcakes"
+    - "Magic Mushroom Risotto"
+
+  venue:
+    name: "The Great Hall"
+    decorations:
+      - "Floating Candles"
+      - "House Banners"
+      - "Magical Creatures Centerpiece"
+    theme: "Wizarding World Meets Superheroes"
+    music: "Epic Movie Soundtrack"
+

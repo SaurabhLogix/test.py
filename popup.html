@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Update Popup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <style>
+        .popup {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+
+            top: 3%;
+            width: 90%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            z-index: 999;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-content {
+            text-align: center;
+        }
+
+        .close {
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <!-- Popup Container -->
+    <div id="updatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Your website has been updated!</p>
+        </div>
+    </div>
+
+    <!-- Your website content -->
+    <h1>Welcome to Our Website</h1>
+    <p>This is the main content of your website.</p>
+
+
+
+
+    <script>
+        // Function to show the popup
+        function showPopup() {
+            document.getElementById('updatePopup').style.display = 'block';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('updatePopup').style.display = 'none';
+        }
+
+        // Automatically show the popup when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            showPopup();
+        });
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image box styling */
+.custom-card-img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.custom-card-img-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-card-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover .custom-card-img-box img {
+    transform: scale(1.05);
+}
+
+/* Bottom content styling */
+.custom-card-bottom-content {
+    padding: 15px;
+    background-color: #F7F7F7;
+    border-top: 1px solid #e1e1e1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    height: 20%;
+}
+
+.custom-card-bottom-content .custom-card-clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.custom-card-bottom-content .custom-card-icon-box {
+    float: left;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.custom-card-bottom-content h4 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: 0.8px;
+}
+
+/* Overlay box styling */
+.custom-card-overlay-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 29, 51, 0.9);
+    color: #fff;
+    transition: top 0.7s ease, opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.custom-card-overlay-box .custom-card-clearfix {
+    display: flex;
+    align-items: center;
+}
+
+.custom-card-overlay-box .custom-card-inner-box {
+    text-align: left;
+}
+
+.custom-card-overlay-box .custom-card-icon-box {
+    font-size: 30px;
+    color: #F3B53F;
+    margin-bottom: 10px;
+}
+
+.custom-card-overlay-box h4 {
+    font-size: 20px;
+    margin: 0px 0;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.custom-card-overlay-box .custom-card-text p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.custom-card-overlay-box .custom-card-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-card-overlay-box .custom-card-link a i {
+    margin-left: 5px;
+}
+
+.custom-card-overlay-box .custom-card-link a:hover {
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+/* Hover effects */
+.custom-card:hover .custom-card-overlay-box {
+    top: 0;
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .custom-card {
+        margin: 10px;
+    }
+
+    .custom-card-bottom-content h4 {
+        font-size: 16px;
+    }
+
+    .custom-card-overlay-box h4 {
+        font-size: 18px;
+    }
+
+    .custom-card-overlay-box .custom-card-text p {
+        font-size: 14px;
+    }
+}

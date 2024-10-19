@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title001>Stylish info001 card001</title001>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .info001-card001 {
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s, box-shadow 0.4s;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            position: relative;
+        }
+
+        .info001-card001:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card001-image {
+            position: relative;
+        }
+
+        .card001-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s;
+        }
+
+        .info001-card001:hover .card001-image img {
+            transform: scale(1.1);
+        }
+
+        .card001-content {
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border-top: 5px solid #ff6347;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .title001 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .designation,
+        .qualification {
+            font-size: 16px;
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .info001-card001::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 99, 71, 0.2);
+            border-radius: 50%;
+            transition: transform 0.4s;
+        }
+
+        .info001-card001:hover::before {
+            transform: scale(1.5);
+        }
+
+        @media (max-width: 768px) {
+            .info001-card001 {
+                width: 80%;
+            }
+        }
+    </style>
+    <div class="info001-card001">
+        <div class="card001-image">
+            <img src="image.jpg" alt="Profile Image">
+        </div>
+        <div class="card001-content">
+            <h2 class="title001">John Doe</h2>
+            <p class="designation">Software Engineer</p>
+            <p class="qualification">B.Sc. in Computer Science</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+# Blog Application Configuration
+general:
+  name: MyBlog
+  version: 1.0.0
+  description: A simple blog application configuration file.
+
+database:
+  host: localhost
+  port: 5432
+  username: blogadmin
+  password: blogpassword
+  database_name: blog_db
+
+user_settings:
+  default_role: subscriber
+  password_requirements:
+    min_length: 8
+    require_uppercase: true
+    require_number: true
+  max_login_attempts: 5
+
+theme:
+  default_theme: light
+  available_themes:
+    - light
+    - dark
+    - blue
+  custom_logo_url: https://example.com/logo.png
+
+email:
+  smtp_server: smtp.example.com
+  port: 587
+  username: no-reply@example.com
+  password: emailpassword
+
+features:
+  enabled:
+    - comments
+    - user_registration
+    - analytics
+  disabled:
+    - notifications
